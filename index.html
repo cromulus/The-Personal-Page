@@ -13,17 +13,16 @@
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link href="http:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 	<style>
 	/* FA 4.0.0 and newer */
-.fa {
-  text-rendering: auto;
-}
 		* { padding: 0; margin: 0; font-family: 'Cabin', sans-serif; -webkit-font-smoothing: antialiased;}
 		body { background-color: #333; }
 		p { color: #fff;  font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
 		a { color: #fff; font-weight: bold; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3); }
 		a:hover { color: #990000; border-bottom: 1px solid rgba(255,255,255,1); }
+		.fa {text-rendering: auto;}
+		.icon {border-bottom:0px !important; font-size: 200%;}
 		li {font-size:100%;}
 		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; font-size: 400%; letter-spacing:5px; color: #fff;}
 		#bar {position:relative; top:-5px;}
@@ -33,6 +32,11 @@
 			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
 			background-image { opacity: 0.2; }
 		}
+		ul#connect{white-space:nowrap; width: 400px; padding: 10px 0 0 20px; margin: 0 auto 0 50px !important;}
+		#connect li{display:inline; list-style-type:none;}
+		#connect a{text-decoration: none;padding:3px 5px; border-style: none;}
+		#connect a:link,#navlist a:visited{text-decoration: none; opacity:0.2; border-style: none;}
+		#connect a:hover{text-decoration: none; opacity:0.4; border-style: none;}
 	</style>
 </head>
 
@@ -46,16 +50,37 @@
 <!-- swap out for information about yourself -->
 <div id="about">
 	<p>Bill Cromie is a serial entrepreneur, founding both <a href="selectablemedia.com">Selectable Media</a> and <a href="https://copromote.com">Copromote.com</a>.
-	<p>He writes about tech, art, design, and just about everything else at <a href="http://alchemi.st">Alchemi.st</a>, writes in 140 characters at <a href="http://twitter.com/cromulus">Twitter</a>, does businessy stuff over at <a href="www.linkedin.com/in/billcromie/">Linkedin</a>.
+	<p>He writes about tech, art, design, and just about everything else at <a href="http://alchemi.st">Alchemi.st</a>, writes in 140 characters at <a href="http://twitter.com/cromulus">Twitter</a>, does businessy stuff over at <a href="http://www.linkedin.com/in/billcromie/">Linkedin</a>.
 	He speaks French, is fluent in technology, traveled the globe, and would love to sit down and have a cup of coffe and a chat about just about anything you find fascinating.
+	<ul id="connect">
+	<li>
+		<a class="icon" href="http://twitter.com/cromulus">
+			<i class="fa fa-twitter"></i>
+		</a>
+	</li>
+	<li>
+		<a class="icon" href="http://www.linkedin.com/in/billcromie/">
+			<i class="fa fa-linkedin"></i>
+		</a>
+	</li>
+	<li>
+		<a class="icon" href="http://alchemi.st">
+			<i class="fa fa-rss"></i>
+		</a>
+	</li>
+	<li>
+		<a class="icon" href="http://cromie.org/resume/"><i class="fa fa-check"></i>
+		</a>
+	</li>
+	<li>
+		<a class="icon" href="mailto:bill@cromie.org">
+			<i class="fa fa-email"></i>
+		</a>
+	</li>
+</ul>
+
 </div>
-<ul id="connect">
-		<li><a href="http://twitter.com/cromulus"><i class="fa fa-twitter"></i></a></li>
-		<li><a href="http://www.linkedin.com/in/billcromie/"><i class="fa fa-linkedin"></i></a></li>
-		<li><a href="http://alchemi.st"><i class="fa fa-rss"></i></a></li>
-		<li><a href="http://cromie.org/resume"><i class="fa fa-check"></i></a></li>
-		<li><a href="mailto:bill@cromie.org"><i class="fa fa-email"></i></li>
-		</ul>
+
 <!--include jquery & backstretch-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.backstretch.min.js"></script>

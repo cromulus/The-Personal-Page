@@ -13,9 +13,9 @@
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
-	<link href="http:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-	<style>
-	/* FA 4.0.0 and newer */
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		<style>
+		/* FA 4.0.0 and newer */
 		* { padding: 0; margin: 0; font-family: 'Cabin', sans-serif; -webkit-font-smoothing: antialiased;}
 		body { background-color: #333; }
 		p { color: #fff;  font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
@@ -37,68 +37,67 @@
 		#connect a{text-decoration: none;padding:3px 5px; border-style: none;}
 		#connect a:link,#navlist a:visited{text-decoration: none; opacity:0.2; border-style: none;}
 		#connect a:hover{text-decoration: none; opacity:0.4; border-style: none;}
-	</style>
-</head>
+		</style>
+	</head>
+	<body>
 
-<body>
+	<!-- swap out for a logo -->
+	<div id="monogram">
+		B<span id="bar">|</span>C
+	</div>
 
-<!-- swap out for a logo -->
-<div id="monogram">
-	B<span id="bar">|</span>C
-</div>
+	<!-- swap out for information about yourself -->
+	<div id="about">
+		<p>Bill Cromie is a serial tech entrepreneur, founding both <a href="selectablemedia.com">Selectable Media</a>, <a href="https://copromote.com">Copromote.com</a>, and most recently, <A href="http://significancelabs.org/">Significance Labs</a> a not for profit technology incubator in Brooklyn.
+		</p>
+		<p>He writes about tech, art, design, and just about everything else at <a href="http://alchemi.st">Alchemi.st</a>, writes in 140 characters at <a href="http://twitter.com/cromulus">Twitter</a>, does businessy stuff over at <a href="http://www.linkedin.com/in/billcromie/">Linkedin</a>.
+			He speaks reasonable French, is fluent in technology, traveled the globe, and would love to sit down and have a cup of coffe and a chat about just about anything you find fascinating.
+		<p>
+		<ul id="connect">
+			<li>
+				<a class="icon" href="http://twitter.com/cromulus">
+					<i class="fa fa-twitter"></i>
+				</a>
+			</li>
+			<li>
+				<a class="icon" href="http://github.com/cromulus">
+					<i class="fa fa-github"></i>
+				</a>
+			</li>
+			<li>
+				<a class="icon" href="http://www.linkedin.com/in/billcromie/">
+					<i class="fa fa-linkedin"></i>
+				</a>
+			</li>
+			<li>
+				<a class="icon" href="http://alchemi.st">
+					<i class="fa fa-rss"></i>
+				</a>
+			</li>
+			<li>
+				<a class="icon" href="http://cromie.org/resume/"><i class="fa fa-check"></i>
+				</a>
+			</li>
+			<li>
+				<a class="icon" href="mailto:bill@cromie.org">
+					<i class="fa fa-email"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
 
-<!-- swap out for information about yourself -->
-<div id="about">
-	<p>Bill Cromie is a serial entrepreneur, founding both <a href="selectablemedia.com">Selectable Media</a> and <a href="https://copromote.com">Copromote.com</a>.
-	<p>He writes about tech, art, design, and just about everything else at <a href="http://alchemi.st">Alchemi.st</a>, writes in 140 characters at <a href="http://twitter.com/cromulus">Twitter</a>, does businessy stuff over at <a href="http://www.linkedin.com/in/billcromie/">Linkedin</a>.
-	He speaks French, is fluent in technology, traveled the globe, and would love to sit down and have a cup of coffe and a chat about just about anything you find fascinating.
-	<ul id="connect">
-	<li>
-		<a class="icon" href="http://twitter.com/cromulus">
-			<i class="fa fa-twitter"></i>
-		</a>
-	</li>
-	<li>
-		<a class="icon" href="http://github.com/cromulus">
-			<i class="fa fa-github"></i>
-		</a>
-	</li>
-	<li>
-		<a class="icon" href="http://www.linkedin.com/in/billcromie/">
-			<i class="fa fa-linkedin"></i>
-		</a>
-	</li>
-	<li>
-		<a class="icon" href="http://alchemi.st">
-			<i class="fa fa-rss"></i>
-		</a>
-	</li>
-	<li>
-		<a class="icon" href="http://cromie.org/resume/"><i class="fa fa-check"></i>
-		</a>
-	</li>
-	<li>
-		<a class="icon" href="mailto:bill@cromie.org">
-			<i class="fa fa-email"></i>
-		</a>
-	</li>
-</ul>
-
-</div>
-
-<!--include jquery & backstretch-->
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script type="text/javascript" src="jquery.backstretch.min.js"></script>
-<script type="text/javascript">
-$(function(){
-     $(window).resize(function(){
-         if($(this).width() >= 767){
-             $.backstretch("bc_bg.jpg", {speed: 150});
-         }
-      })
-      .resize();//trigger resize on page load
-});
-</script>
-
-</body>
+		<!--include jquery & backstretch-->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.backstretch.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$(window).resize(function(){
+			if($(this).width() >= 767){
+				$.backstretch("bc_bg.jpg", {speed: 150});
+			}
+		})
+		.resize();//trigger resize on page load
+	});
+	</script>
+	</body>
 </html>

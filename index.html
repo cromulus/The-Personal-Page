@@ -19,18 +19,18 @@
 		/* FA 4.0.0 and newer */
 		* { padding: 0; margin: 0; font-family: 'Cabin', sans-serif; -webkit-font-smoothing: antialiased;}
 		body { background-color: white; background-repeat:no-repeat; }
-		p { color: #000;  font-size: 16px; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
+		p { color: #000;  font-size: 100%; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
 		a { color: #fff; font-weight: bold; text-decoration: none;}
 		a:hover { color: #333; border-bottom: 1px solid #333; }
 		.fa {text-rendering: auto; color:#000;}
 		.icon {border-bottom:0px !important; font-size: 200%;}
 		li {font-size:100%;}
-		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; font-size: 400%; letter-spacing:5px; color: #000;}
+		#monogram { width: 50px; padding: 50px 0 0 0; margin: 0 auto 0 50px; font-size: 600%; letter-spacing:5px; color: #000;}
 		#bar {position:relative; top:-5px;}
-		#about { width: 360px; padding: 0 0 0 150px; margin: -35px 50px 0 auto !important; }
+		#about { width: 45%; padding: 0 0 0 150px; margin: -35px 50px 0 auto !important;}
 		@media (max-width: 767px) {
 			#monogram { position: relative; width: auto; padding: 20px; margin: 0; }
-			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; }
+			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; background-color:rgba(0,0,0,0.1); }
 			background-image { opacity: 0.2; }
 		}
 		ul#connect{white-space:nowrap; width: 400px; padding: 10px 0 0 20px; margin: 0 auto 0 -25px !important;}
@@ -97,7 +97,6 @@
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/trianglify/0.1.2/trianglify.min.js"></script>
 	<script type="text/javascript">
-
 		var t = new Trianglify();
 		t.options.x_gradient=["#f7fcf0", "#e0f3db", "#ccebc5", "#a8ddb5", "#7bccc4", "#4eb3d3", "#2b8cbe", "#0868ac", "#084081"];
 		t.options.noiseIntensity = 0;

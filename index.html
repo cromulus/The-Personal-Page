@@ -18,8 +18,9 @@
 		<style>
 		/* FA 4.0.0 and newer */
 		* { padding: 0; margin: 0; font-family: 'Cabin', sans-serif; -webkit-font-smoothing: antialiased;}
-		body { background-color: white; background-repeat:no-repeat;overflow-x: hidden; }
-		html{overflow-x: hidden;}
+		body { background-color: white; background-repeat:no-repeat;
+			}
+		html{}
 		p { color: #000;  font-size: 100%; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
 		a { color: #fff; font-weight: bold; text-decoration: none;}
 		a:hover { color: #333; border-bottom: 1px solid #333; }
@@ -105,7 +106,7 @@
   		return d3.rgb(c).brighter(0.5);
 		});
 		$(window).resize(function(){
-			var pattern = t.generate($( window ).width(), $( window ).height());
+			var pattern = t.generate($( document ).width(), $(document).height());
 			document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
 		})
 		$(window).trigger('resize');

@@ -115,17 +115,11 @@
 		var cb = function() {
 			var l = document.createElement('link'); l.rel = 'stylesheet';
 			l.href = '//fonts.googleapis.com/css?family=Cabin';
-			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-		};
-		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-		webkitRequestAnimationFrame || msRequestAnimationFrame;
-		if (raf) raf(cb);
-		else window.addEventListener('load', cb);
-
-		var cb = function() {
-			var l = document.createElement('link'); l.rel = 'stylesheet';
-			l.href = '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css';
-			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+			var h = document.getElementsByTagName('head')[0];
+			h.parentNode.insertBefore(l, h);
+			var k = document.createElement('link'); k.rel = 'stylesheet';
+			k.href = '/css/font-awesome-4.2.0/css/font-awesome.min.css';
+			h.parentNode.insertBefore(k, h);
 		};
 		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 		webkitRequestAnimationFrame || msRequestAnimationFrame;

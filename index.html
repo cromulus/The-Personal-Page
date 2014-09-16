@@ -120,7 +120,7 @@
 			var k = document.createElement('link'); k.rel = 'stylesheet';
 			k.href = '/css/font-awesome-4.2.0/css/font-awesome.min.css';
 			h.parentNode.insertBefore(k, h);
-			wetTimeout(function(){
+			setTimeout(function(){
 				// Hide the address bar!
 				window.scrollTo(0, 1);
 			}, 0);

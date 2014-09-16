@@ -13,9 +13,8 @@
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<link href='//fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
-	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-		<style>
+
+	<style>
 		/* FA 4.0.0 and newer */
 		* { padding: 0; margin: 0; font-family: 'Cabin', sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;}
 		html {}
@@ -36,21 +35,16 @@
 			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; background-color:rgba(0,0,0,0.14); }
 			background-image { opacity: 0.2; }
 		}
-
 		#connect li{display:inline; list-style-type:none;}
 		#connect a{text-decoration: none;padding:3px 5px; border-style: none;}
-		#connect a:link,#navlist a:visited{text-decoration: none; opacity:0.2; border-style: none;}
-		#connect a:hover{text-decoration: none; opacity:0.4; border-style: none;}
-		</style>
-	</head>
-	<body>
-
-	<!-- swap out for a logo -->
+		#connect a:link,#navlist a:visited{text-decoration: none; opacity:0.5; border-style: none;}
+		#connect a:hover{text-decoration: none; opacity:0.3; border-style: none;}
+	</style>
+</head>
+<body>
 	<div id="monogram">
 		B<span id="bar">|</span>C
 	</div>
-
-	<!-- swap out for information about yourself -->
 	<div id="about">
 		<p>Bill Cromie is a serial tech entrepreneur, founding <a href="http://selectablemedia.com">Selectable Media</a>,  <a href="https://copromote.com">Copromote.com</a>,  and most recently, <a href="http://significancelabs.org/">Significance Labs</a>, a not for profit technology incubator in Brooklyn.
 		</p>
@@ -120,7 +114,25 @@
 
 	  ga('create', 'UA-53210324-1', 'auto');
 	  ga('send', 'pageview');
+		var cb = function() {
+			var l = document.createElement('link'); l.rel = 'stylesheet';
+			l.href = '//fonts.googleapis.com/css?family=Cabin';
+			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+		};
+		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+		webkitRequestAnimationFrame || msRequestAnimationFrame;
+		if (raf) raf(cb);
+		else window.addEventListener('load', cb);
 
+		var cb = function() {
+			var l = document.createElement('link'); l.rel = 'stylesheet';
+			l.href = '//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css';
+			var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
+		};
+		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+		webkitRequestAnimationFrame || msRequestAnimationFrame;
+		if (raf) raf(cb);
+		else window.addEventListener('load', cb);
 	</script>
 	</body>
 </html>

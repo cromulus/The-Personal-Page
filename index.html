@@ -123,13 +123,19 @@
 		};
 		var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 		webkitRequestAnimationFrame || msRequestAnimationFrame;
-		if (raf) raf(cb);
-		else window.addEventListener('load', cb);
-		
+		if (raf){
+			raf(cb);
+		}
+		else {
+			window.addEventListener('load', cb);
+		}
+
 		window.addEventListener("load",function() {
 			// Set a timeout...
+			console.log('on load');
 			setTimeout(function(){
 				// Hide the address bar!
+				console.log('scrolling');
 				window.scrollTo(0, 1);
 			}, 0);
 		});

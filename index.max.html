@@ -1,7 +1,8 @@
+
 <!doctype html>
 <html>
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 	<title>Bill Cromie</title>
 	<link rel="Shortcut Icon" href="/favicon.ico" type="image/x-icon" />
 	<meta http-equiv="pragma" content="no-cache" />
@@ -18,7 +19,14 @@
 		/* FA 4.0.0 and newer */
 		* { padding: 0; margin: 0; font-family: 'Cabin', sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;}
 		html {}
-		body { background-color: white; background-repeat:no-repeat;}
+		body { background-color: white; background-repeat:no-repeat;
+			opacity:0;
+			-webkit-transition: opacity 1.5s ease-in-out;
+       			-moz-transition: opacity 1.5s ease-in-out;
+        		-ms-transition: opacity 1.5s ease-in-out;
+         		-o-transition: opacity 1.5s ease-in-out;
+            		transition: opacity 1.5s ease-in-out;
+		}
 
 		p { color: #000;  font-size: 100%; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
 		a { color: #fff; font-weight: bold; text-decoration: none;}
@@ -33,7 +41,7 @@
 		@media (max-width: 767px) {
 			#monogram { position: relative; width: auto; padding: 20px; margin: 0; }
 			#about { position: relative; width: auto; padding: 20px; margin: 0 !important; background-color:rgba(0,0,0,0.14); }
-			background-image { opacity: 0.2; }
+			background-image { opacity: 0.21; }
 		}
 		#connect li{display:inline; list-style-type:none;}
 		#connect a{text-decoration: none;padding:3px 5px; border-style: none;}
@@ -94,7 +102,7 @@
 	<script type="text/javascript">
 		var cb = function() {
 			var l = document.createElement('link'); l.rel = 'stylesheet';
-			l.href = '//fonts.googleapis.com/css?family=Cabin&text=,.014ABCFHLMSTabcdefghijklmnoprstuvwy';
+			l.href = '//fonts.googleapis.com/css?family=Cabin&text=,.014ABCFHLMSTabcdefghijklmnoprstuvwy|';
 			var h = document.getElementsByTagName('head')[0];
 			h.parentNode.insertBefore(l, h);
 			var k = document.createElement('link'); k.rel = 'stylesheet';
@@ -119,6 +127,8 @@
 		$(window).resize(function(){
 			var pattern = t.generate($( document ).width(), $(document).height());
 			document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
+			$('body').css("opacity",1);
+
 		})
 		$(window).trigger('resize');
 
@@ -129,6 +139,8 @@
 
 		ga('create', 'UA-53210324-1', 'auto');
 		ga('send', 'pageview');
+
 	</script>
 	</body>
 </html>
+

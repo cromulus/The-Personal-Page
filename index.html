@@ -15,7 +15,8 @@
 	<style>
 		* { padding: 0; margin: 0; font-family: 'Cabin', sans-serif; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;}
 		html {}
-		body { background-color: white; background-repeat:no-repeat;}
+		body { background-color: white; background-repeat:no-repeat;
+			transition: background 1s ease-in-out;}
 		p { color: #000;  font-size: 100%; line-height: 24px; margin-bottom: 22px; -webkit-font-smoothing: antialiased; }
 		a { color: #fff; font-weight: bold; text-decoration: none;}
 		a:hover { color: #333; border-bottom: 1px solid #333; }
@@ -96,6 +97,12 @@
 	<!--include jquery, d3 and trianglify -->
 	<script type="text/javascript" src="/js/concatenated.min.js"></script>
 	<script type="text/javascript">
+	WebFont.load({
+    	google: {
+      	families: ['Cabin'],
+      	text:",.014ABCFHLMSTabcdefghijklmnoprstuvwy|'"
+    	}
+  	});
 		var cb = function() {
 			var h = document.getElementsByTagName('head')[0];
 			var k = document.createElement('link'); k.rel = 'stylesheet';
@@ -111,10 +118,15 @@
 		t.options.y_gradient = t.options.x_gradient.map(function(c) {
 			return d3.rgb(c).brighter(0.5);
 		});
+
 		$(window).resize(function(){
 			var pattern = t.generate($( document ).width(), $(document).height());
+
+			// $('body').fadeTo('slow', 0.1, function() {
+   //  		$(this).css('background-image', pattern.dataUrl);
+			// }).fadeTo('slow', 0.1);
 			document.body.setAttribute('style', 'background-image: '+pattern.dataUrl);
-			$('body').css("opacity",1);
+			//$('body').css("opacity",1);
 
 		})
 		$(window).trigger('resize');
@@ -126,13 +138,6 @@
 
 		ga('create', 'UA-53210324-1', 'auto');
 		ga('send', 'pageview');
-
-		WebFont.load({
-    	google: {
-      	families: ['Cabin'],
-      	text:",.014ABCFHLMSTabcdefghijklmnoprstuvwy|'"
-    	}
-  	});
 	</script>
 </div>
 </body>

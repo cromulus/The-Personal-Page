@@ -8,7 +8,17 @@
 	<meta name="robots" content="all" />
 	<meta name="MSSmartTagsPreventParsing" content="true" />
 	<meta http-equiv="imagetoolbar" content="false" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<script src="//ajax.googleapis.com/ajax/libs/webfont/1.5.10/webfont.js"></script>
+	<script>
+	  WebFont.load({
+    	google: {
+      	families: ['Cabin'],
+      	text:",.014ABCFHLMSTabcdefghijklmnoprstuvwy|'"
+    	}
+  	});
+	</script>
+	<!--320-->
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -96,12 +106,6 @@
 	<!--include jquery, d3 and trianglify -->
 	<script type="text/javascript" src="/js/concatenated.min.js"></script>
 	<script type="text/javascript">
-	WebFont.load({
-    	google: {
-      	families: ['Cabin'],
-      	text:",.014ABCFHLMSTabcdefghijklmnoprstuvwy|'"
-    	}
-  	});
 		var cb = function() {
 			var h = document.getElementsByTagName('head')[0];
 			var k = document.createElement('link'); k.rel = 'stylesheet';
